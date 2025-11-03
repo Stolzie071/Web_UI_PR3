@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Практика: Цвет и микроанимации (HTML-заготовка)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ХЭДЕР -->
+  <header class="site-header" data-animate="slide-down" data-animate-delay="100">
+    <div class="container">
+      <a class="brand" href="/" aria-label="На главную">
+        <span class="brand__logo" aria-hidden="true">◎</span>
+        <span class="brand__text">UI Lab</span>
+      </a>
+
+      
+      <!-- Навигация -->
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="nav__list" data-stagger>
+          <li class="nav__item" data-animate="fade-up" data-animate-delay="150">
+            <a class="nav__link is-active" href="#home">
+              <span class="nav__link-text">Главная</span>
+              <span class="nav__underline" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="nav__item" data-animate="fade-up" data-animate-delay="200">
+            <a class="nav__link" href="#about">
+              <span class="nav__link-text">О нас</span>
+              <span class="nav__underline" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="nav__item" data-animate="fade-up" data-animate-delay="250">
+            <a class="nav__link" href="#services">
+              <span class="nav__link-text">Услуги</span>
+              <span class="nav__underline" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="nav__item" data-animate="fade-up" data-animate-delay="300">
+            <a class="nav__link" href="#contacts">
+              <span class="nav__link-text">Контакты</span>
+              <span class="nav__underline" aria-hidden="true"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ГЛАВНЫЙ КОНТЕНТ -->
+  <main id="home">
+    <!-- главынй блок  -->
+    <section class="hero" aria-labelledby="hero-title" data-animate="fade-in" data-animate-delay="200">
+      <div class="container">
+        <h1 id="hero-title">Цвет и движение в современном интерфейсе</h1>
+        <p class="hero__subtitle">Выбираем палитру, проверяем контраст, добавляем живые отклики навигации и карточек.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#services">
+            <span class="btn__label">К нашим услугам</span>
+            <span class="btn__ripple" aria-hidden="true"></span>
+          </a>
+          <a class="btn btn--ghost" href="#about">
+            <span class="btn__label">Узнать о нас</span>
+            <span class="btn__ripple" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "о нас" -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">О нас (Обо мне)</h2>
+        <p class="section__lead">Собственно я - практикант по UI: аккуратные цвета, контраст и движение там, где нужно.</p>
+        <div class="cards" data-stagger>
+          <article class="card" data-animate="pop-in" data-animate-delay="100">
+            <div class="card__media">
+              <img src="cup.png" alt="Демонстрационная картинка" loading="lazy">
+            </div>
+            <h3 class="card__title">Аккуратные палитры</h3>
+            <p class="card__text">Основной и акцентный цвета, проверка контраста, состояния ссылок и кнопок.</p>
+            <div class="card__actions">
+              <a class="btn btn--primary" href="#services"><span class="btn__label">Подробнее</span><span class="btn__ripple" aria-hidden="true"></span></a>
+            </div>
+          </article>
+
+          <article class="card" data-animate="pop-in" data-animate-delay="150">
+            <div class="card__media">
+              <img src="cup.png" alt="Демонстрационная картинка" loading="lazy">
+            </div>
+            <h3 class="card__title">Микроанимации навигации</h3>
+            <p class="card__text">Подсветка при наведении, бегущее подчеркивание, лёгкое масштабирование.</p>
+            <div class="card__actions">
+              <a class="btn btn--primary" href="#services"><span class="btn__label">К примерам</span><span class="btn__ripple" aria-hidden="true"></span></a>
+            </div>
+          </article>
+
+          <article class="card" data-animate="pop-in" data-animate-delay="200">
+            <div class="card__media">
+              <img src="cup.png" alt="Демонстрационная картинка" loading="lazy">
+            </div>
+            <h3 class="card__title">Анимация появления</h3>
+            <p class="card__text">@keyframes + animation-delay для последовательного "входа" элементов.</p>
+            <div class="card__actions">
+              <a class="btn btn--primary" href="#services"><span class="btn__label">Как это сделать</span><span class="btn__ripple" aria-hidden="true"></span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">Услуги</h2>
+        <ul class="features" data-stagger>
+          <li class="feature" data-animate="fade-up" data-animate-delay="100">
+            <span class="feature__icon" aria-hidden="true">🎨</span>
+            <div class="feature__body">
+              <h3 class="feature__title">Подбор палитры</h3>
+              <p class="feature__text">Главный, акцентный, вспомогательные. Состояния: по наведению, фокусу, нажатию.</p>
+            </div>
+          </li>
+          <li class="feature" data-animate="fade-up" data-animate-delay="150">
+            <span class="feature__icon" aria-hidden="true">✨</span>
+            <div class="feature__body">
+              <h3 class="feature__title">Микроанимации</h3>
+              <p class="feature__text">Подсветка ссылок, underline-slide, scale, ripple для кнопок.</p>
+            </div>
+          </li>
+          <li class="feature" data-animate="fade-up" data-animate-delay="200">
+            <span class="feature__icon" aria-hidden="true">🧩</span>
+            <div class="feature__body">
+              <h3 class="feature__title">Готовые компоненты</h3>
+              <p class="feature__text">Навбар, карточки, футер.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section" aria-labelledby="contacts-title">
+      <div class="container">
+        <h2 id="contacts-title">Контакты</h2>
+        <form class="contact-form" action="#" method="post" data-animate="fade-in" data-animate-delay="100" novalidate>
+          <div class="form__row">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Как к вам обращаться">
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="example@mail.com">
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="message">Сообщение</label>
+            <textarea class="form__input" id="message" name="message" rows="4" placeholder="Коротко о задаче"></textarea>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">
+              <span class="btn__label">Отправить</span>
+              <span class="btn__ripple" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="site-footer" data-animate="fade-in" data-animate-delay="100">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Навигация в футере">
+        <a class="footer-nav__link" href="#home">Главная</a>
+        <a class="footer-nav__link" href="#about">О нас</a>
+        <a class="footer-nav__link" href="#services">Услуги</a>
+        <a class="footer-nav__link" href="#contacts">Контакты</a>
+      </nav>
+      <p class="copyright">© 2025 UI Lab. Все права как будто есть.</p>
+    </div>
+  </footer>
+
+  
+</body>
+</html>
